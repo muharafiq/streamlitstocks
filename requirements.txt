@@ -4,3 +4,6 @@ pandas
 statsmodels
 matplotlib
 sklearn
+sklearn.metrics
+mean_squared_error
+ARIMA
