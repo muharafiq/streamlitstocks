@@ -23,10 +23,9 @@ stock_data['200MA'] = stock_data['Close'].rolling(window=200).mean()
 def calculate_rsi(data, window=14):
     # ... (keep the same)
 
-stock_data['RSI'] = calculate_rsi(stock_data)
-
-stock_data['Close_diff'] = stock_data['Close'].diff()
-stock_data = stock_data.dropna()
+    stock_data['RSI'] = calculate_rsi(stock_data)
+    stock_data['Close_diff'] = stock_data['Close'].diff()
+    stock_data = stock_data.dropna()
 
 # Check stationarity
 result = adfuller(stock_data['Close_diff'])
